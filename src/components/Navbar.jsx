@@ -18,7 +18,7 @@ const [isMenuOpen,setIsMenuOpen] = useState(false)
         <div className=' container  w-full mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8  md:h-20 h-16'>
             
             {/* logo */}
-            <div className='flex items-center gap-1 cursor-pointer sm:flex-1 md:flex-0'>
+            <div className='flex items-center gap-1 cursor-pointer flex-1 md:flex-0'>
 
                 <div className='h-4 w-4 bg-blue-600 rounded-full opacity-100 hover:opacity-75 transition-opacity '></div>
 
