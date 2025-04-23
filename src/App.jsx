@@ -4,6 +4,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ComponentLogo from './components/ComponentLogo'
 import PurposeSection from './components/PurposeSection'
+import Featuressection from './components/Featuressection'
+import ScheduleSection from './components/ScheduleSection'
+import MonitorSectin from './components/MonitorSectin'
+import PricingSection from './components/PricingSection'
 
 const App = () => {
   return (
@@ -16,6 +20,10 @@ const App = () => {
     <Hero />
     <ComponentLogo />
     <PurposeSection />
+    <Featuressection />
+    <ScheduleSection />
+    <MonitorSectin />
+    <PricingSection />
     </div>
     
     </main>
