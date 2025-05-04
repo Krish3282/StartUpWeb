@@ -52,7 +52,7 @@ const testimonials = [
 
 ];
   return (
-    <section className=' py-16 px-4 max-w-7xl  mx-40'>
+    <section className=' py-16 px-4 max-w-7xl  mx-auto'>
       <div className='text-center mb-12'>
         <h2 className='text-3xl font-bold md:text-4xl mb-4'>What our client says</h2>
         <p className='text-gray-600'> Things that make it th ebest place to start trading.</p>
@@ -63,8 +63,8 @@ const testimonials = [
         <Swiper
         navigation = {
           {
-            nextEl :'swiper-button-next-custom',
-            prevEl : 'swiper-button-prev-custom',
+            nextEl :'.swiper-button-next-custom',
+            prevEl :'.swiper-button-prev-custom',
           }
         }
         spaceBetween={30}
@@ -85,24 +85,38 @@ const testimonials = [
         modules={[Navigation]}
         className="testimonial-swiper md:md-12"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {testimonials.map((testimonal,index)=>(
+          <SwiperSlide key={index} className='h-full md:py-12 py-4'>
+              <div className='text-center bg-white p-4 rounded-lg shadow-md  flex flex-col  items-center'>
+                  <div className='w-24 h-24 mx-auto mb-4'>
+                      <img src={testimonal.image} 
+                       className='w-full h-full object-cover rounded-full' />
+                  </div>
+          {/* for star we do this */}
+                  <div className='flex items-center mb-2'>
+                      {[...Array(5)].map((_,starIndex)=>(
+                        <span className='text-yellow-500'>★</span>
+                      ))
+                      }
+                  </div>
+                  <h3 className='text-xl font-semibold mb-3'>{testimonal.name}</h3>
+                  <p className='text-gray-600'>{testimonal.text}</p>
+              </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+
+
+
         {/* navigational button */}
-        <div className='flex justify-center gap-4 mt-8'>
+
+        <div className='flex justify-center gap-4 mt-4 md:mt-8'>
           {/* left button */}
-          <button className='w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer '>
+          <button className='swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer '>
             <BsChevronLeft  />
           </button>
           {/* right button*/}
-          <button className='w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer '>
+          <button className='swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer '>
             <BsChevronRight  />
           </button>
         </div>

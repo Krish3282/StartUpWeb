@@ -10,6 +10,7 @@ import MonitorSectin from './components/MonitorSectin'
 import PricingSection from './components/PricingSection'
 import ServicesSection from './components/ServicesSection'
 import Testimonials from './components/Testimonials'
+import NweslettterSection from './components/NweslettterSection'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
     <PricingSection />
     <ServicesSection />
     <Testimonials />
+    <NweslettterSection />
     </div>
     
     </main>
